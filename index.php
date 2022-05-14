@@ -26,13 +26,15 @@
 
 <article>
 
-<select>Selecione o fabricante abaixo:</select>
+<select>Selecione o fabricante abaixo:
 
 <option> <?=$fabricante[0]?> </option>
 <option> <?=$fabricante[1]?> </option>
 <option> <?=$fabricante[2]?> </option>
 <option> <?=$fabricante[3]?> </option>
 <option> <?=$fabricante[4]?> </option>
+
+</select>
 
 </article>
 
