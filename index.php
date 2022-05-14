@@ -1,43 +1,53 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-</head>
-<body>
-    <h1>Cadastro de itens</h1>    
-<hr>
+<?php   require "includes/topo.php"  ?>
 
-<form action="" method="POST">
+        <article class="campo">
 
-<article>
+            <label for="produto">Nome do Produto:</label>
+            <input type="text" id="produto" name="produto">
 
-<label for="produto">Nome do Produto:</label>
-<input type="text" id="produto" name="produto">
+        </article>
 
-</article>
+        <article class="campo">
 
-<?php
-    $fabricante = ["Samsung","Asus","LG","Apple","Motorola"] ;
-?>
+            <p>Selecione um fabricante :</p>
+            <select>
+
+                <?php
+                $fabricantes = ["", "Samsung", "Asus", "LG", "Apple", "Motorola"];
+                ?>
+
+                <?php
+                foreach ($fabricantes as $fabricante) {
+
+                ?>
+                    <option> <?= $fabricante ?> </option>
+                <?php
+                }
+                ?>
+
+            </select>
+        </article>
+
+        <article class="campo">
+
+            <label for="valor" >Informe valor: R$ </label>
+            <input type="number" id="valor" name="valor" min="100" step=".01" max="10000" placeholder=" Ex: 100,05">
+
+        </article>
 
 
-<article>
+        <article class="campo">
 
-<select>Selecione o fabricante abaixo:
+            <label for="QNT">Informe Quatidade:</label>
+            <input type="number" name="QNT" id="QNT" min="1" max="50" placeholder="Ex: 10">
+        </article>
 
-<option> <?=$fabricante[0]?> </option>
-<option> <?=$fabricante[1]?> </option>
-<option> <?=$fabricante[2]?> </option>
-<option> <?=$fabricante[3]?> </option>
-<option> <?=$fabricante[4]?> </option>
+        <article class="campo">
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="msg" cols="30" rows="5"></textarea>
 
-</select>
+        </article>
 
-</article>
+        <button class="botao" type="submit">Adicionar a rede</button>
 
-</form>
-</body>
-</html>
+  <?php require "includes/roda_pe.php"  ?>
