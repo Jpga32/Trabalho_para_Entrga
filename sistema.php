@@ -10,8 +10,8 @@
         <?php
     }else{
 
-        $nome = $_POST["produto"];
-        $valor = $_POST["valor"];
+      
+        $valor =   $nome = $_POST["produto"];$_POST["valor"];
         $quantidade = $_POST["QNT"];
         $descricao = $_POST["descricao"];
 
